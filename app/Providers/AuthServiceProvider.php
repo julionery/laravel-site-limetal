@@ -27,14 +27,14 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies($gate);
 
-        foreach ($this->getPermissoes() as $permissao) {
-            $gate->define($permissao->nome,
-                function ($user) use ($permissao) {
-                    return $user->existePapel($permissao->papeis)
-                        || $user->existeAdmin();
-                }
-            );
-        }
+        //foreach ($this->getPermissoes() as $permissao) {
+        //    $gate->define($permissao->nome,
+        //        function ($user) use ($permissao) {
+        //            return $user->existePapel($permissao->papeis)
+        //                || $user->existeAdmin();
+        //        }
+        //    );
+        //}
 
     }
 
