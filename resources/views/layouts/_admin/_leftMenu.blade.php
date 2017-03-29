@@ -1,4 +1,5 @@
 <aside id="sidebar" class="sidebar c-overflow">
+    
     <div class="s-profile">
         <a href="" data-ma-action="profile-menu-toggle">
             <div class="sp-pic">
