@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://sitelimetal.herokuapp.com/'),
 
     /*
     |--------------------------------------------------------------------------
@@ -103,7 +103,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY'),
+    'key' => env('APP_KEY', 'base64:liX6BrTi722liTOObKpu4cptSo0XKTPAecFlaskldus='),
 
     'cipher' => 'AES-256-CBC',
 
