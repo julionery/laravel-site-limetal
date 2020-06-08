@@ -1,40 +1,80 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+<h1 align="center">Site Limetal</h1>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+Site Institucional totalmente dinâmico e configurado via painel administrativo.
 
-## About Laravel
+### :rocket: Tecnologias:
+- [PHP](https://www.php.net/)
+- [Laravel](https://laravel.com/)
+- [MySQL](https://www.mysql.com/)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+### :briefcase: Arquitetura: 
+ - [MVC - Model-View-Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### :books: Ferramentas e componentes:
+- [NPM](https://nodejs.org/en/)
+- [Composer](https://getcomposer.org/)
+- [Migrations](https://laravel.com/docs/7.x/migrations)
+- [Seeds](https://laravel.com/docs/7.x/seeding)
+- [JWT- JSON Web Tokens](https://jwt.io/)
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+<h2 align="center">Demonstração</h2>
 
-## Learning Laravel
+![](https://github.com/julionery/docs/blob/master/Limetal/limetal.png?raw=true)
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+<h2 align="center">Painel Administrativo</h2>
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+![](https://github.com/julionery/docs/blob/master/Limetal/painel1.PNG?raw=true)
+![](https://github.com/julionery/docs/blob/master/Limetal/painel2.PNG?raw=true)
+![](https://github.com/julionery/docs/blob/master/Limetal/painel3.PNG?raw=true)
+![](https://github.com/julionery/docs/blob/master/Limetal/painel4.PNG?raw=true)
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+### :information_source: Como Usar:
 
-## Security Vulnerabilities
+Para executar corretamente esta aplicação você precisará do [Git](https://git-scm.com), [PHP](https://www.php.net/), [MySQL](https://www.mysql.com/), [Laravel](https://laravel.com/), [Composer](https://getcomposer.org/) e [NPM](https://nodejs.org/en/) já instalados e configurados. 
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+No seu terminal digite os comandos:
 
-## License
+```bash
+# Clone este repositório
+$ git clone https://github.com/julionery/laravel-site-limetal.git
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+# Vá para a pasta do repositório
+$ cd laravel-site-limetal/
+
+# Instale as dependências
+$ npm install
+$ composer install
+
+# Ajuste as configurações de conexão
+$ renomeie o arquivo .env.example para .env e adicione as informações do banco de dados
+$ e crie o banco de dados "limetal" no seu MySQL
+
+# Crie as informações do banco de dados
+$ php artisan migrate
+$ php artisan db:seed
+
+# Inicie a aplicação
+$ php artisan serve
+
+OBS: para ativar verificação por tipo de usuário (ACL) descomente o código em:
+app/Provides/AuthServiceProvider.php
+
+// foreach ($this->getPermissoes() as $permissao) {
+//     $gate->define($permissao->nome,
+//         function ($user) use ($permissao) {
+//             return $user->existePapel($permissao->papeis)
+//                 || $user->existeAdmin();
+//         }
+//     );
+// }
+
+```
+
+
+---
+
+<h4 align="center">
+    Feito com ❤ por <a href="https://www.linkedin.com/in/julio-nery/" target="_blank">Júlio Nery</a>!
+    <g-emoji class="g-emoji" alias="wave" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png">👋</g-emoji>
+</h4>
