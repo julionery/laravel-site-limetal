@@ -1,7 +1,9 @@
 <?php
 
+use App\Models\Configuracao;
 use Illuminate\Database\Seeder;
 use App\Models\Pagina;
+use App\Models\User;
 
 class PaginaTableSeeder extends Seeder
 {
@@ -136,6 +138,15 @@ class PaginaTableSeeder extends Seeder
         $paginaContato->save();
 
         echo "\nPaginaTableSeeder - Pagina contato criada com sucesso!";
+
+        $config = new Configuracao();
+        $config->nomeEmpresa = "Limetal";
+        $config->titulo = "Empresa do ramo metalurgico";
+        $config->descricao = "A mais de 60 anos em Iporá-GO";
+        $config->save();
+
+        echo "\nConfigurações da empresa criada com sucesso!";
+        
 
     }
 }
